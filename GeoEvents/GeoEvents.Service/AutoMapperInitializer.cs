@@ -13,7 +13,7 @@ namespace GeoEvents.Service
         public static void AutomapperMappings()
         {
             AutoMapper.Mapper.Initialize(config => {
-                config.CreateMap<IEventsEntity, IEvent>();
+                config.CreateMap<IEventsEntity, IEvent>().ReverseMap();
             });
         }
 
