@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryEnum.cs" />
     <Compile Include="Filter.cs" />
     <Compile Include="IFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -37,7 +37,7 @@ namespace GeoEvents.Service
         public bool CreateEvent(IEvent evt) 
         {
             evt.Category = 0;
-            for(int i = 0; i++; i < evt.Categories.Count)
+            for(int i = 0; i < evt.Categories.Count;  i++)
             {
                 evt.Category += evt.Categories[i];
             }
@@ -46,7 +46,24 @@ namespace GeoEvents.Service
 
         public List<IEvent> GetEvents(IFilter filter)
         {
-            return Repository.GetEvents(filter);
+            List<IEvent> events = Repository.GetEvents(filter);
+            foreach(IEvent evt in events)
+            {
+                int mult = 1;
+                evt.Categories = new List<int>();
+                int cat = evt.Category;
+                while(cat > 0)
+                {
+                    int mod = cat % 2;
+                    if(mod == 1)
+                    {
+                        evt.Categories.Add(mult);
+                    }
+                    mult *= 2;
+                    cat = cat >> 1;
+                }
+            }
+            return events;
         }
 
         public List<IImage> GetImages(Guid eventId)
