@@ -8,12 +8,12 @@ namespace GeoEvents.Common
 {
     public enum CategoryEnum
     {
-        Entertainment = 1,
+        Music = 1,
         Culture = 2,
         Sport = 4,
-        Business = 8,
-        Gastro = 16,
+        Miscellaneous = 8,
+        Business = 16,
         Religious = 32,
-        Miscellaneous = 64
+        Gastro = 64
     }
 }
