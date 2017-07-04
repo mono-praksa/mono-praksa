@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoMapperInitializer.cs" />
     <Compile Include="EventService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -47,6 +52,10 @@
     <ProjectReference Include="..\GeoEvents.Common\GeoEvents.Common.csproj">
       <Project>{2efa7ac2-7440-45ac-b271-3c8127171ea0}</Project>
       <Name>GeoEvents.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeoEvents.Model.Common\GeoEvents.Model.Common.csproj">
+      <Project>{a9c74ef8-3718-4954-be36-3bbde2a41bab}</Project>
+      <Name>GeoEvents.Model.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\GeoEvents.Repository.Common\GeoEvents.Repository.Common.csproj">
       <Project>{c6a7347b-7c01-46cd-a01b-11529571d6a6}</Project>
@@ -56,6 +65,9 @@
       <Project>{41e892aa-f4b4-444b-8a2c-e743a2b9cfe3}</Project>
       <Name>GeoEvents.Service.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,6 +7,29 @@ namespace GeoEvents.WebAPI.Mock
 {
     public class MockData
     {
+<<<<<<< HEAD
+        public MockData() { }
+        public List<EventsViewModel> GenerateMockData()
+        {
+            List<EventsViewModel> list = new List<EventsViewModel>();
+            for(int i=0; i<10; i++)
+            {
+                EventsViewModel evm = new EventsViewModel();
+                evm.Id = Guid.NewGuid();
+                evm.Lat = 12;
+                evm.Long = 10;
+                evm.Name = "testing";
+                evm.StartTime = DateTime.UtcNow;
+                evm.EndTime = DateTime.UtcNow;
+                evm.Description = "description";
+                evm.Categories.Add(1);
+                list.Add(evm);
+            }
+            return list;
+        }
+        public 
+=======
 
+>>>>>>> 687ed0d83644216d336ccdc4d908691b7fc54b9c
     }
 }

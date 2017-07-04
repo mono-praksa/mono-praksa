@@ -6,20 +6,17 @@ using System.Threading.Tasks;
 using GeoEvents.Model.Common;
 using GeoEvents.Repository.Common;
 
-namespace GeoEvents.Service
+namespace GeoEvents.Model.Mapping
 {
-    public class AutoMapperInitializer
+    public static class AutoMapperMaps
     {
-        public static void AutomapperMappings()
+        public static void Initialize()
         {
-            AutoMapper.Mapper.Initialize(config => {
+            AutoMapper.Mapper.Initialize(config =>
+            {
                 config.CreateMap<IEventEntity, IEvent>().ReverseMap();
             });
-            AutoMapper.Mapper.Initialize(config => {
-                config.CreateMap<IEventEntity, IEvent>();
-            });
+ 
         }
-
-
     }
 }
