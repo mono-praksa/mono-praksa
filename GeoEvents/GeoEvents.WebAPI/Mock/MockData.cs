@@ -7,7 +7,6 @@ namespace GeoEvents.WebAPI.Mock
 {
     public class MockData
     {
-<<<<<<< HEAD
         public MockData() { }
         public List<EventsViewModel> GenerateMockData()
         {
@@ -27,9 +26,5 @@ namespace GeoEvents.WebAPI.Mock
             }
             return list;
         }
-        public 
-=======
-
->>>>>>> 687ed0d83644216d336ccdc4d908691b7fc54b9c
     }
 }
