@@ -47,9 +47,11 @@ namespace GeoEvents.Service
 
         public List<IEvent> GetEvents(IFilter filter)
         {
-            List<IEvent> events = Repository.GetEvents(filter);
-            foreach(IEvent evt in events)
+            var events = new List<IEvent>();
+            List<IEventEntity> entities = Repository.GetEvents(filter);
+            foreach(IEvent entity in entities)
             {
+                IEvent evt = Mapper.Map<IEvent>(entity);
                 int mult = 1;
                 evt.Categories = new List<int>();
                 int cat = evt.Category;
@@ -63,13 +65,19 @@ namespace GeoEvents.Service
                     mult *= 2;
                     cat = cat >> 1;
                 }
+                events.Add(evt);
             }
             return events;
         }
 
         public List<IImage> GetImages(Guid eventId)
         {
-            return Repository.GetImages(eventId);
+            var images = new List<IImage>();
+            List<IImageEntity> entities = Repository.GetImages(eventId);
+            foreach(IImageEntity entity in entities)
+            {
+                images.Add(Mapper.Map<IImage>(entity));
+            }
         }
 
         #endregion Methods
