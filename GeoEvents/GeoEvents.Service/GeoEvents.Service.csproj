@@ -48,6 +48,10 @@
       <Project>{2efa7ac2-7440-45ac-b271-3c8127171ea0}</Project>
       <Name>GeoEvents.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GeoEvents.Model.Common\GeoEvents.Model.Common.csproj">
+      <Project>{a9c74ef8-3718-4954-be36-3bbde2a41bab}</Project>
+      <Name>GeoEvents.Model.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GeoEvents.Repository.Common\GeoEvents.Repository.Common.csproj">
       <Project>{c6a7347b-7c01-46cd-a01b-11529571d6a6}</Project>
       <Name>GeoEvents.Repository.Common</Name>

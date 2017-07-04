@@ -56,6 +56,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GeoEvents.Repository.Common\GeoEvents.Repository.Common.csproj">
+      <Project>{C6A7347B-7C01-46CD-A01B-11529571D6A6}</Project>
+      <Name>GeoEvents.Repository.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
