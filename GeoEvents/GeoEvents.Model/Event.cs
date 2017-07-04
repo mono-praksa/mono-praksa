@@ -14,9 +14,10 @@ namespace GeoEvents.Model
         public string Description { get; set; }
         public decimal Lat { get; set; }
         public decimal Long { get; set; }
-        public List<int> Categories { get; set; }
+        public int Category { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
+        public List<int> Categories { get; set; }
 
         public Event(Guid id, string name, string description, decimal longitude, decimal latitude, List<int> categories, DateTime startTime, DateTime endTime) {
             Id = id;

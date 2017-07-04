@@ -10,6 +10,8 @@ namespace GeoEvents.Repository
 {
     public class EventRepository : IEventRepository
     {
+
+
         public bool CreateEvent(IEventEntity evt)
         {
             throw new NotImplementedException();
