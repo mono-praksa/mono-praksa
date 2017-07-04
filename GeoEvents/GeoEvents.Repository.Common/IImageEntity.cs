@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GeoEvents.Repository.Common
 {
-    interface IImageEntity
+    public interface IImageEntity
     {
         Guid Id { get; set; }
         Guid EventId { get; set; }

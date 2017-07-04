@@ -12,7 +12,7 @@ namespace GeoEvents.Repository
     {
         public bool CreateEvent(IEventEntity evt)
         {
-            
+            throw new NotImplementedException();
         }
 
         public List<IEventEntity> GetEvents(IFilter filter)
