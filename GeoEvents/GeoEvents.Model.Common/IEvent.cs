@@ -18,5 +18,6 @@ namespace GeoEvents.Model.Common
         decimal Long { get; set; }
         int Category { get; set; }
         DateTime EndTime { get; set; }
+        List<int> Categories { get; set; }
     }
 }

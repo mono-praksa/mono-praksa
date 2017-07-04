@@ -14,6 +14,7 @@ namespace GeoEvents.Common
         decimal Radius { get; set; }
         DateTime StartTime { get; set; }
         DateTime EndTime { get; set; }
+        int Category { get; set; }
         #endregion Properties
     }
 }
