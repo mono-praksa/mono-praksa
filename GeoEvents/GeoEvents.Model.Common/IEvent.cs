@@ -18,5 +18,8 @@ namespace GeoEvents.Model.Common
         List<int> Categories { get; set; }
         DateTime StartTime { get; set; }
         DateTime EndTime { get; set; }
+        int Category { get; set; }
+
+        #endregion Properties
     }
 }
