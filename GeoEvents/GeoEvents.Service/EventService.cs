@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using GeoEvents.Service.Common;
 using GeoEvents.Model.Common;
+using GeoEvents.Common;
+using GeoEvents.Repository.Common;
 
 namespace GeoEvents.Service
 {
@@ -32,8 +34,13 @@ namespace GeoEvents.Service
 
         #region Methods
 
-        bool CreateEvent(IEvent evt) 
+        public bool CreateEvent(IEvent evt) 
         {
+            evt.Category = 0;
+            for(int i = 0; i++; i < evt.Categories.Count)
+            {
+                evt.Category += evt.Categories[i];
+            }
             return Repository.CreateEvent(evt);
         }
 
