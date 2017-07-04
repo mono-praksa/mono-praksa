@@ -40,7 +40,7 @@ namespace GeoEvents.DAL
             
         }
 
-        public void CloseConnection ()
+        public void CloseConnection()
         {
             try
             {
@@ -48,9 +48,19 @@ namespace GeoEvents.DAL
             }
             catch (PostgresException msg)
             {
-                throw msg; 
+                throw msg;
             }
-            
+
         }
+
+
+          public NpgsqlCommand NpgConn()
+        {
+            return connection.CreateCommand();
+
+        }
+
+
+        
     }
 }
