@@ -7,6 +7,7 @@ using GeoEvents.Service.Common;
 using GeoEvents.Model.Common;
 using GeoEvents.Common;
 using GeoEvents.Repository.Common;
+using AutoMapper;
 
 namespace GeoEvents.Service
 {
@@ -41,7 +42,7 @@ namespace GeoEvents.Service
             {
                 evt.Category += evt.Categories[i];
             }
-            return Repository.CreateEvent(evt);
+            return Repository.CreateEvent(Mapper.Map<IEventEntity>(evt));
         }
 
         public List<IEvent> GetEvents(IFilter filter)
