@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GeoEvents.Service.Common;
+using GeoEvents.Model.Common;
 
 namespace GeoEvents.Service
 {
