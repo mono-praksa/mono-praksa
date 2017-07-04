@@ -78,6 +78,7 @@ namespace GeoEvents.Service
             {
                 images.Add(Mapper.Map<IImage>(entity));
             }
+            return images;
         }
 
         #endregion Methods
