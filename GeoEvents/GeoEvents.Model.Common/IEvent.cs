@@ -13,11 +13,10 @@ namespace GeoEvents.Model.Common
         Guid Id { get; set; }
         string Name { get; set; }
         string Description { get; set; }
-        DateTime StartTime { get; set; }
         decimal Lat { get; set; }
         decimal Long { get; set; }
-        int Category { get; set; }
-        DateTime EndTime { get; set; }
         List<int> Categories { get; set; }
+        DateTime StartTime { get; set; }
+        DateTime EndTime { get; set; }
     }
 }
