@@ -16,7 +16,6 @@ namespace GeoEvents.Model.Common
         DateTime StartTime { get; set; }
         decimal Lat { get; set; }
         decimal Long { get; set; }
-        long Duration { get; set; }
         int Category { get; set; }
         DateTime EndTime { get; set; }
     }
