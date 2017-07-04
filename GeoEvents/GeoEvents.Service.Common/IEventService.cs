@@ -29,7 +29,7 @@ namespace GeoEvents.Service.Common
         /// Creates event.
         /// </summary>
         /// <returns></returns>
-        bool CreateEvents(IEvent evt);
+        bool CreateEvent(IEvent evt);
 
         #endregion Methods
     }
