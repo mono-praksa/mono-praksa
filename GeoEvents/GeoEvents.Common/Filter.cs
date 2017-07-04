@@ -16,5 +16,14 @@ namespace GeoEvents.Common
         public DateTime EndTime { get; set; }
         public int Category { get; set; }
         #endregion Properties
+
+        public Filter(decimal uLat, decimal uLong, decimal radius, DateTime startTime, DateTime endTime, int category) {
+            ULat = uLat;
+            ULong = uLong;
+            Radius = radius;
+            StartTime = startTime;
+            EndTime = endTime;
+            Category = category;
+        }
     }
 }
