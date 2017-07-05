@@ -19,7 +19,7 @@ namespace GeoEvents.Repository.Common
 
         List<IImageEntity> GetImages(Guid eventID);
 
-        bool CreateImages(IImageEntity img,Guid eventId);
+        bool CreateImages(Guid eventId,List<IImageEntity> img);
 
     }
 }

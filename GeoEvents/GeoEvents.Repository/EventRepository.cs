@@ -50,10 +50,11 @@ namespace GeoEvents.Repository
             return Flag;
         }
 
-        public bool CreateImages(IImageEntity img, Guid eventId)
+        public bool CreateImages(Guid eventId, List<IImageEntity> img)
         {
             throw new NotImplementedException();
         }
+
 
         public List<IEventEntity> GetEvents(IFilter filter)
         {
