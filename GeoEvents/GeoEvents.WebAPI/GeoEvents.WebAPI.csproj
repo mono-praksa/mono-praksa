@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{EC67F1D1-81F1-40DF-9375-BE71D2495A30}</ProjectGuid>
+    <ProjectGuid>{E136857C-87D5-4081-8554-695045C68338}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -150,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AutoMapperConfig.cs" />
@@ -185,14 +186,14 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImagesController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Mock\MockData.cs" />
-    <Compile Include="Models\EventsViewModel.cs" />
-    <Compile Include="Models\ImagesViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -253,9 +254,17 @@
       <Project>{2efa7ac2-7440-45ac-b271-3c8127171ea0}</Project>
       <Name>GeoEvents.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GeoEvents.Model.Common\GeoEvents.Model.Common.csproj">
+      <Project>{a9c74ef8-3718-4954-be36-3bbde2a41bab}</Project>
+      <Name>GeoEvents.Model.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GeoEvents.Model\GeoEvents.Model.csproj">
       <Project>{a439ac22-a628-484c-a4e7-ab87f56d808e}</Project>
       <Name>GeoEvents.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeoEvents.Service.Common\GeoEvents.Service.Common.csproj">
+      <Project>{41e892aa-f4b4-444b-8a2c-e743a2b9cfe3}</Project>
+      <Name>GeoEvents.Service.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -280,7 +289,16 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>8603</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8603/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>
