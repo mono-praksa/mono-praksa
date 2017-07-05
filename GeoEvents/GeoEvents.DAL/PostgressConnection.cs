@@ -54,12 +54,17 @@ namespace GeoEvents.DAL
         }
 
 
-          public NpgsqlCommand NpgConn()
+          public NpgsqlCommand NpgComm()
         {
             return connection.CreateCommand();
 
         }
 
+        public NpgsqlConnection NpgConn()
+        {
+
+            return connection;
+        }
 
 
     }

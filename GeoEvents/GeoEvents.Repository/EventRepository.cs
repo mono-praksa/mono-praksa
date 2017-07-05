@@ -23,19 +23,56 @@ namespace GeoEvents.Repository
         public bool CreateEvent(IEventEntity evt)
         {
             PostgresConn.OpenConnection();
+            bool Flag=false;
 
 
-            IDbCommand command = PostgresConn.NpgConn();
-            string query = "INSERT into \"Events\" VALUES(uuid_generate_v4(),'2003-2-1'::timestamp,'2003-6-1'::timestamp,2.3,2.5,'nekievent','diesrefgh')";
-            command.CommandText = query;
-            command.ExecuteNonQuery();
+            NpgsqlCommand command = PostgresConn.NpgComm();
+            command = new NpgsqlCommand
+                ("insert into \"Events\" values(@Id, @StartTime, @EndTime, @Lat, @Long, @Name, @Description, @Category)",
+                PostgresConn.NpgConn());
 
-            return true;
+            command.Parameters.AddWithValue("@Id", evt.Id);
+            command.Parameters.AddWithValue("@Category", evt.Category);
+            command.Parameters.AddWithValue("@Description", evt.Description);
+            command.Parameters.AddWithValue("@StartTime", evt.StartTime);
+            command.Parameters.AddWithValue("@EndTime", evt.EndTime);
+            command.Parameters.AddWithValue("@Lat", evt.Lat);
+            command.Parameters.AddWithValue("@Long", evt.Long);
+            command.Parameters.AddWithValue("@Name", evt.Name);
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+                Flag = true;
+            }
+
+            PostgresConn.CloseConnection();
+
+            return Flag;
+        }
+
+        public bool CreateImages(IImageEntity img, Guid eventId)
+        {
+            throw new NotImplementedException();
         }
 
         public List<IEventEntity> GetEvents(IFilter filter)
         {
-            throw new NotImplementedException();
+            PostgresConn.OpenConnection();
+
+            NpgsqlCommand command = new NpgsqlCommand("SELECT * FROM \"Events\" WHERE ", PostgresConn.NpgConn());
+
+            NpgsqlDataReader dr = command.ExecuteReader();
+
+            EventEntity tmp;
+            List<IEventEntity> SelectEvents= new List<IEventEntity>();
+
+            while (dr.Read())
+            {
+                tmp = new EventEntity { Name = dr[1].ToString(), StartTime = Convert.ToDateTime(dr[0]) };
+               SelectEvents.Add(tmp);
+            }
+
+            return SelectEvents;
         }
 
         public List<IImageEntity> GetImages(Guid eventID)
