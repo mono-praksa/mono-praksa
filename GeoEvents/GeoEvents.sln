@@ -15,11 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoEvents.Repository", "Geo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoEvents.Repository.Common", "GeoEvents.Repository.Common\GeoEvents.Repository.Common.csproj", "{C6A7347B-7C01-46CD-A01B-11529571D6A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoEvents.WebAPI", "GeoEvents.WebAPI\GeoEvents.WebAPI.csproj", "{E136857C-87D5-4081-8554-695045C68338}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoEvents.Model", "GeoEvents.Model\GeoEvents.Model.csproj", "{A439AC22-A628-484C-A4E7-AB87F56D808E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoEvents.Model.Common", "GeoEvents.Model.Common\GeoEvents.Model.Common.csproj", "{A9C74EF8-3718-4954-BE36-3BBDE2A41BAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoEvents.WebAPI", "GeoEvents.WebAPI\GeoEvents.WebAPI.csproj", "{EC67F1D1-81F1-40DF-9375-BE71D2495A30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,10 +51,6 @@ Global
 		{C6A7347B-7C01-46CD-A01B-11529571D6A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6A7347B-7C01-46CD-A01B-11529571D6A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6A7347B-7C01-46CD-A01B-11529571D6A6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E136857C-87D5-4081-8554-695045C68338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E136857C-87D5-4081-8554-695045C68338}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E136857C-87D5-4081-8554-695045C68338}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E136857C-87D5-4081-8554-695045C68338}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A439AC22-A628-484C-A4E7-AB87F56D808E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A439AC22-A628-484C-A4E7-AB87F56D808E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A439AC22-A628-484C-A4E7-AB87F56D808E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,6 +59,10 @@ Global
 		{A9C74EF8-3718-4954-BE36-3BBDE2A41BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9C74EF8-3718-4954-BE36-3BBDE2A41BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9C74EF8-3718-4954-BE36-3BBDE2A41BAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC67F1D1-81F1-40DF-9375-BE71D2495A30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC67F1D1-81F1-40DF-9375-BE71D2495A30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC67F1D1-81F1-40DF-9375-BE71D2495A30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC67F1D1-81F1-40DF-9375-BE71D2495A30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

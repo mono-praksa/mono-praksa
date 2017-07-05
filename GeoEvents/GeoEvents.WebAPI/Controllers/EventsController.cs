@@ -1,6 +1,7 @@
 ﻿using GeoEvents.Model.Common;
 using GeoEvents.Service.Common;
 using GeoEvents.Common;
+using GeoEvents.WebAPI.Mock;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,8 @@ namespace GeoEvents.WebAPI.Controllers
         public bool CreateEvent(string name, string description, decimal longitude, decimal latitude, List<int> categories, DateTime startTime, DateTime endTime)
         {
             Event evt = new Event(0, name, description, longitude, latitude, categories, startTime, endTime);
-            return Service.CreateEvent(evt);
+            //return Service.CreateEvent(evt);
+            return true;
         }
 
         [HttpGet]
@@ -35,6 +37,15 @@ namespace GeoEvents.WebAPI.Controllers
         {
             Filter filter = new Filter(latitude, longitude, radius, startTime, endTime);
             return Service.GetEvents(filter);
+        }
+
+        static void Main(string[] args)
+        {
+            MockData mock = new MockData();
+            List<EventsViewModel> data = mock.GenerateMockData();
+            if (CreateEvent(data)) {
+                Console.WriteLine("True");
+            }
         }
     }
 }

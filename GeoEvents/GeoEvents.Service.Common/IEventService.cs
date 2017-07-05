@@ -31,6 +31,14 @@ namespace GeoEvents.Service.Common
         /// <returns></returns>
         bool CreateEvent(IEvent evt);
 
+        /// <summary>
+        /// Adds images to an event.
+        /// </summary>
+        /// <param name="eventId">The event's id.</param>
+        /// <param name="images">The list of images to add.</param>
+        /// <returns></returns>
+        bool CreateImages(Guid eventId, List<IImage> images);
+
         #endregion Methods
     }
 }
