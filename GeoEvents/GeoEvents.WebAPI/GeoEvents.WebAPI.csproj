@@ -249,7 +249,24 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\GeoEvents.Common\GeoEvents.Common.csproj">
+      <Project>{2efa7ac2-7440-45ac-b271-3c8127171ea0}</Project>
+      <Name>GeoEvents.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeoEvents.Model.Common\GeoEvents.Model.Common.csproj">
+      <Project>{a9c74ef8-3718-4954-be36-3bbde2a41bab}</Project>
+      <Name>GeoEvents.Model.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeoEvents.Model\GeoEvents.Model.csproj">
+      <Project>{a439ac22-a628-484c-a4e7-ab87f56d808e}</Project>
+      <Name>GeoEvents.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeoEvents.Service.Common\GeoEvents.Service.Common.csproj">
+      <Project>{41e892aa-f4b4-444b-8a2c-e743a2b9cfe3}</Project>
+      <Name>GeoEvents.Service.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
