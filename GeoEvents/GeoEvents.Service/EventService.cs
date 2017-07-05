@@ -72,23 +72,12 @@ namespace GeoEvents.Service
 
         public List<IImage> GetImages(Guid eventId)
         {
-            var images = new List<IImage>();
-            List<IImageEntity> entities = Repository.GetImages(eventId);
-            foreach(IImageEntity entity in entities)
-            {
-                images.Add(Mapper.Map<IImage>(entity));
-            }
-            return images;
+            return Mapper.Map<List<IImage>>(Repository.GetImages(eventId));
         }
 
         public bool CreateImages(Guid eventId, List<IImage> images)
         {
-            var entities = new List<IImageEntity>();
-            foreach (IImageEntity image in images)
-            {
-                entities.Add(Mapper.Map<IImageEntity>(image));
-            }
-            return Repository.CreateImages(eventId);
+            return Repository.CreateImages(eventId, Mapper.Map<List<IImageEntity>>(images));
         }
             
             #endregion Methods
