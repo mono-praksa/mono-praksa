@@ -81,7 +81,17 @@ namespace GeoEvents.Service
             return images;
         }
 
-        #endregion Methods
+        public bool CreateImages(Guid eventId, List<IImage> images)
+        {
+            var entities = new List<IImageEntity>();
+            foreach (IImageEntity image in images)
+            {
+                entities.Add(Mapper.Map<IImageEntity>(image));
+            }
+            return Repository.CreateImages(eventId);
+        }
+            
+            #endregion Methods
 
     }
 }
